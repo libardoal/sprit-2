@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+
+:root {
+  --Red: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "space grotesk", sans-serif;
+  background-image: url("images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 30% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 2000px;
+  margin: 400px;
+}
+
+/*Front Card Image*/
+
+.card-front {
+  margin-bottom: 50px;
+  max-height: 245px;
+  max-width: 447px;
+  background-image: url("images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.front-card-num {
+  color: white;
+  font-size: 24px;
+  letter-spacing: 4px;
+  top: 140px;
+  left: 25px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.lg-circle {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 15px;
+}
+
+.sm-circle {
+  height: 25px;
+  width: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-top: 25px;
+}
+
+.front-card-num {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.exp-date-container {
+  display: flex;
+}
+
+.front-info {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 50px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 25px;
+}
+
+/* Back Card Image */
+
+.card-back {
+  margin-left: 100px;
+  position: relative;
+  width: 447px;
+  height: 237px;
+}
+
+.back-cvv {
+  position: absolute;
+  top: 110px;
+  right: 55px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+/* Form */
+
+.card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 575px;
+}
+
+form {
+  width: 100%;
+  padding: 0 100px;
+}
+
+::placeholder {
+  color: rgba(100, 100, 100, 0.3);
+  font-weight: bold;
+  font-family: "space grotesk", sans-serif;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.name label {
+  margin-bottom: 5px;
+}
+
+.name input {
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-family: "space grotesk", sans-serif;
+  border: 2px solid rgba(100, 100, 100, 0.3);
+}
+
+.card-number {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 15px;
+ 
+}
+
+.card-number label {
+  margin-bottom: 5px;
+}
+
+.card-number input {
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-family: "space grotesk", sans-serif;
+  border: 2px solid rgba(100, 100, 100, 0.3);
+}
+
+.date-section {
+  display: flex;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.date-container {
+  display: flex;
+  width: 100%;
+}
+
+.date-container label {
+  letter-spacing: 2px;
+}
+
+.month-year-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.dates input {
+  width: 45%;
+}
+
+.dates .year {
+  margin-left: 10px;
+}
+
+.cvc-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.date-section label {
+  margin-bottom: 5px;
+}
+
+.date-container input {
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-family: "space grotesk", sans-serif;
+
+  border: 2px solid rgba(100, 100, 100, 0.3);
+}
+
+.card-number {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  margin-top: 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--Very-dark-violet);
+  color: white;
+  font-family: "space grotesk", sans-serif;
+  box-shadow: 0 5px 5px rgba(100, 100, 100, 0.5);
+  cursor: pointer;
+}
+
+/* Thank You */
+
+.thank-you {
+  min-width: 575px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.thank-you img {
+  margin-bottom: 50px;
+}
+
+.thank-you h3 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.thank-you p {
+  color: rgba(100, 100, 100, 0.7);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.thank-you button {
+  max-width: 500px;
+}
+
+/* Errors */
+
+.name-error {
+  font-size: 10px;
+  color: var(--Red);
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.number-error {
+  font-size: 10px;
+  color: var(--Red);
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.date-error {
+  font-size: 10px;
+  color: var(--Red);
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  text-transform: none;
+  display: none;
+}
+
+.cvc-error {
+  font-size: 10px;
+  color: var(--Red);
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  text-transform: none;
+  display: none;
+}
+
+@media only screen and (max-width : 376px) {
+  body {
+    background-size: 100% 30%;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-container {
+    position: relative;
+    height: 50  vh;
+  }
+
+  .card-back {
+    transform: translateY(-250px);
+    z-index: 0;
+    position: sticky;
+  }
+
+  .card-front {
+    transform: translateY(176px);
+    z-index: 1;
+    position: sticky;
+  }
+
+  .card-info {
+    transform: translateY(-50px);
+  }
+}
